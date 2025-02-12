@@ -22,7 +22,8 @@ export class GeWeChatMessageEncoder<C extends Context> extends MessageEncoder<C,
 
 
       if (this.payload.quote) {
-        msg.quote(this.payload.text)
+        // @ts-ignore
+        this.bot.internal.Message.quote({title: this.payload.text, msgid: msg._newMsgId, wxid: msg.isRoom ? msg.roomId : msg.fromId})
       } else {
         if (atters.length > 0) {
           const room = await msg.room()
