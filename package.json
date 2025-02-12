@@ -1,7 +1,15 @@
 {
   "name": "koishi-plugin-adapter-gewechat",
   "description": "koishi adapter for Gewechat",
-  "version": "0.0.1",
+  "version": "1.0.1",
+  "contributors": [
+    "sqiao7 <teekimo@outlook.com>"
+  ],
+  "homepage": "https://github.com/sqiao7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqiao7/koishi-plugin-adapter-gewechat"
+  },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,14 +17,27 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
+  "koishi": {
+    "description": {
+      "en": "koishi adapter for Gewechat",
+      "zh": "Gewechat的koishi适配器实现"
+    },
+    "service": {
+      "implements": [
+        "adapter"
+      ]
+    }
+  },
   "peerDependencies": {
-    "koishi": "^4.18.3"
+    "koishi": "^4.18.7"
+  },
+  "dependencies": {
+    "gewechaty": "^0.0.24",
+    "node-cache": "^5.1.2"
   }
 }

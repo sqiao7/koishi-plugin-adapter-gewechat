@@ -1,5 +1,3 @@
 # koishi-plugin-adapter-gewechat
 
-[![npm](https://img.shields.io/npm/v/koishi-plugin-adapter-gewechat?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-adapter-gewechat)
-
-koishi adapter for Gewechat
+对 `Gewechat` 服务的nodejs依赖进行 koishi 适配器封装

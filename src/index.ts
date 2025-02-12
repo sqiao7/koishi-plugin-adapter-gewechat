@@ -1,11 +1,19 @@
-import { Context, Schema } from 'koishi'
+import { GeWeChatBot } from './bot'
 
 export const name = 'adapter-gewechat'
 
-export interface Config {}
+export * from './bot'
+export * from './message'
+export * from './gewechaty-server'
 
-export const Config: Schema<Config> = Schema.object({})
+export default GeWeChatBot
 
-export function apply(ctx: Context) {
-  // write your plugin here
+declare module 'koishi' {
+  interface Context {
+    server: any
+  }
 }
+
+
+
+
